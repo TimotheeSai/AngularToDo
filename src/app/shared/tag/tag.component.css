@@ -1,0 +1,15 @@
+.tag {
+  font-size: 0.875rem;
+  font-family: "Inter";
+  height: 2rem;
+  line-height: 1.25rem;
+  padding: .25rem .75rem;
+  border-radius: 6px;
+  background: var(--neutral-100);
+  color: #363F72;
+}
+
+.dark {
+  background: var(--neutral-700);
+  color: #FCFCFD;
+}

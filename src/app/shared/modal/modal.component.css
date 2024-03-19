@@ -1,0 +1,43 @@
+dialog {
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+}
+
+dialog:modal {
+    transition-property: positions;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+dialog[open] {
+    animation: show 150ms ease-in normal;
+}
+
+::backdrop {
+    background: var(--neutral-600);
+    opacity: 0.5;
+}
+
+hr {
+    background-color: var(--neutral-200);
+    border: none;
+    height: 1px;
+}
+
+h3 {
+    margin: 1.5rem;
+    color: var(--neutral-900);
+    font-family: "Poppins";
+    font-weight: 500;
+}
+
+.modal-content {
+    margin: 2rem 1.5rem;
+}
+
+.modal-actions {
+    display: flex;
+    margin: 1.5rem;
+    justify-content: space-between;
+}

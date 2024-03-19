@@ -1,6 +1,22 @@
 # AngularTodo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+[stackblitz demp](https://stackblitz.com/~/github.com/TimotheeSai/AngularToDo)
+
+## ToDo
+
+[Test Angular](https://xd.adobe.com/view/166546a3-bf60-4319-b902-ae246ac8795e-4336/specs/)
+
+
+- [ ] eslint + prettier
+- [x] Form errors
+- [x] responsive
+- [ ] basic tests, with screenshot ?
+- [ ] Check style
+- [ ] animate disapear ?
+- [ ] scroll
+
+
 
 ## Development server
 

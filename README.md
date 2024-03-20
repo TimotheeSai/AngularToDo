@@ -10,7 +10,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 -   [x] eslint + prettier
 -   [x] Form errors
 -   [x] responsive
--   [ ] basic tests, with screenshot ?
+-   [x] basic tests, with screenshot ?
 -   [ ] Check style
 -   [ ] animate disapear ?
 -   [x] scroll

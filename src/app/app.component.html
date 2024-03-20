@@ -1,26 +1,40 @@
 <main class="main">
-  <div class="header">
-    <div>
-      <h3 class='title'>{{ title }}</h3>
-      <p class='sub_title'>{{ subTitle }}</p>
+    <div class="header">
+        <div>
+            <h3 class="title">{{ title }}</h3>
+            <p class="sub_title">{{ subTitle }}</p>
+        </div>
+        <app-button (click)="setEditedProject()">
+            <img
+                class="project_icon"
+                src="assets/svg/plus.svg"
+                alt="plus"
+            />
+            Ajouter
+        </app-button>
     </div>
-    <app-button (onClick)="setEditedProject()">
-      <img class='project_icon' src="assets/svg/plus.svg" />
-      Ajouter
-    </app-button>
-  </div>
-  <div class="content">
-
-    <ul class='project_list'>
-      @for (project of projectList; track project.id) {
-      <app-project [project]="project" (editProject)="setEditedProject(project)"></app-project>
-      }
-    </ul>
-    <app-modal #modal [title]="'Ajouter une demande d\'autorisation'">
-      <app-project-editor [project]="editedProject" (formValid)="onFormValid($event)"></app-project-editor>
-    </app-modal>
-  </div>
+    <div class="content">
+        <ul class="project_list">
+            @for (project of projectList; track project.id) {
+                <app-project
+                    [project]="project"
+                    (editProject)="setEditedProject(project)"
+                ></app-project>
+            }
+        </ul>
+        <app-modal
+            #modal
+            (confirm)="onModalConfirm($event)"
+            [title]="modalContent.title"
+            [confirmButtonText]="modalContent.confirmButtonText"
+        >
+            <app-project-editor
+                #editor
+                [project]="editedProject"
+                (formValid)="onFormValid($event)"
+            ></app-project-editor>
+        </app-modal>
+    </div>
 </main>
-
 
 <router-outlet />

@@ -1,11 +1,6 @@
 import { Project } from '../project';
-import { Component, Input, Output, EventEmitter } from '@angular/core';
-import {
-    Validators,
-    FormBuilder,
-    FormsModule,
-    ReactiveFormsModule,
-} from '@angular/forms';
+import { Component, Input, Output, EventEmitter, ViewChild, OnChanges } from '@angular/core';
+import { Validators, FormBuilder, FormsModule, ReactiveFormsModule, NgForm } from '@angular/forms';
 import { NgClass } from '@angular/common';
 import { ProjectService } from '../project.service';
 
@@ -16,7 +11,8 @@ import { ProjectService } from '../project.service';
     templateUrl: './project-editor.component.html',
     styleUrl: './project-editor.component.css',
 })
-export class ProjectEditorComponent {
+export class ProjectEditorComponent implements OnChanges {
+    @ViewChild('form') form!: NgForm;
     @Input() project?: Project;
     @Output() formValid = new EventEmitter<boolean>();
 
@@ -36,18 +32,18 @@ export class ProjectEditorComponent {
     }
 
     get name() {
-        return this.projectForm.get('name')
+        return this.projectForm.get('name');
     }
 
     get user() {
-        return this.projectForm.get('user')
+        return this.projectForm.get('user');
     }
 
     onSubmit() {
-        console.log('form submited', this.projectForm);
+        this.projectForm.markAllAsTouched();
         if (this.projectForm.invalid) {
             this.formValid.emit(false);
-            return
+            return;
         }
         if (!this.project) {
             this.projectService.createProject({

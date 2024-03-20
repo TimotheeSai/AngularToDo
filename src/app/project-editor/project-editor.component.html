@@ -1,19 +1,44 @@
-<form id="projectForm" [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+<form
+    #form="ngForm"
+    [formGroup]="projectForm"
+    (ngSubmit)="onSubmit()"
+>
     <div>
-        <input type="text" name="name" placeholder="Projet de travaux *" formControlName="name" />
-        @if(name && name.invalid && (name.dirty || name.touched)) {
-        <label class="error" for="name">
-            <div>Veuillez renseigner un projet</div>
-        </label>
+        <input
+            type="text"
+            name="name"
+            placeholder="Projet de travaux *"
+            formControlName="name"
+        />
+        @if (name && name.invalid && (name.dirty || name.touched)) {
+            <label
+                class="error"
+                for="name"
+            >
+                <div>Veuillez renseigner un projet</div>
+            </label>
         }
     </div>
     <div>
-        <input type="text" name="user" placeholder="Utilisateur *" formControlName="user"/>
-        @if(user && user.invalid && (user.dirty || user.touched)) {
-        <label class="error" for="user">
-            <div>Veuillez renseigner un utilisateur</div>
-        </label>
+        <input
+            type="text"
+            name="user"
+            placeholder="Utilisateur *"
+            formControlName="user"
+        />
+        @if (user && user.invalid && (user.dirty || user.touched)) {
+            <label
+                class="error"
+                for="user"
+            >
+                <div>Veuillez renseigner un utilisateur</div>
+            </label>
         }
     </div>
-    <input type="text" name="contract" placeholder="Contrat" formControlName="contract" />
+    <input
+        type="text"
+        name="contract"
+        placeholder="Contrat"
+        formControlName="contract"
+    />
 </form>

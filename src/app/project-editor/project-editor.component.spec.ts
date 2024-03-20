@@ -3,21 +3,20 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProjectEditorComponent } from './project-editor.component';
 
 describe('ProjectEditorComponent', () => {
-  let component: ProjectEditorComponent;
-  let fixture: ComponentFixture<ProjectEditorComponent>;
+    let component: ProjectEditorComponent;
+    let fixture: ComponentFixture<ProjectEditorComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ProjectEditorComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(ProjectEditorComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [ProjectEditorComponent],
+        }).compileComponents();
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+        fixture = TestBed.createComponent(ProjectEditorComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
+
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

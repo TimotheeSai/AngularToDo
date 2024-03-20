@@ -15,11 +15,11 @@ export class ProjectService {
 
     createProject(project: Project): void {
         project.id = this.projects.length + 1;
-        this.projects.push(project)
+        this.projects.push(project);
     }
 
     updateProject(project: Project): void {
-        const oldValue = this.projects.find(value => value.id === project.id)
+        const oldValue = this.projects.find((value) => value.id === project.id);
         this.projects.splice(this.projects.indexOf(oldValue as Project), 1, project);
     }
 

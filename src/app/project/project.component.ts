@@ -9,12 +9,7 @@ import { ProjectService } from '../project.service';
 @Component({
     selector: 'app-project',
     standalone: true,
-    imports: [
-        TagComponent,
-        PillComponent,
-        ProjectEditorComponent,
-        ModalComponent,
-    ],
+    imports: [TagComponent, PillComponent, ProjectEditorComponent, ModalComponent],
     templateUrl: './project.component.html',
     styleUrl: './project.component.css',
 })
@@ -28,6 +23,7 @@ export class ProjectComponent {
 
     deleteProject() {
         this.projectService.deleteProject(this.project);
+        this.togglePopupMenu(false);
     }
 
     togglePopupMenu(show: boolean) {
@@ -40,7 +36,5 @@ export class ProjectComponent {
         }
     }
 
-    constructor(
-        private projectService: ProjectService
-    ) {}
+    constructor(private projectService: ProjectService) {}
 }

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -12,9 +12,4 @@ export class ButtonComponent {
     @Input() type?: 'button' | 'submit' = 'button';
     @Input() form?: string = '';
     @Input() variant?: 'primary' | 'secondary' = 'primary';
-    @Output() onClick = new EventEmitter();
-
-    onClickEmit(event: Event) {
-        this.onClick.emit(event);
-    }
 }

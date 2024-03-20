@@ -1,10 +1,9 @@
 .pill {
-  font-family: "Archivo";
-  font-weight: 500;
-  font-size: .875rem;
-  color: #DC6803;
-  background: #FEF0C7;
-  border-radius: 14px;
-  padding: .25rem 1.25rem;
+    font-family: 'Archivo';
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #dc6803;
+    background: #fef0c7;
+    border-radius: 14px;
+    padding: 0.25rem 1.25rem;
 }
-

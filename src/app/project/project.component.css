@@ -33,13 +33,13 @@
     font-size: 1rem;
     font-weight: 500;
     color: var(--neutral-900);
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
 }
 
 .sub_title {
     font-size: 0.875rem;
-    font-family: "Inter", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: var(--neutral-600);
     margin: 0;
@@ -65,7 +65,7 @@ button {
     background: none;
     border: none;
     cursor: pointer;
-    font-family: "Inter";
+    font-family: 'Inter';
     color: var(--neutral-600);
 }
 
@@ -98,7 +98,9 @@ dialog {
     border-radius: 10px;
     top: 0;
     left: 150%;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    box-shadow:
+        0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
     overflow: hidden;
 }
 

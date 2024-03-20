@@ -1,14 +1,32 @@
-<dialog type="modal" id="dialog" class="drawer" #dialog (click)="onClick($event)">
-    @if(title) {
-    <h3>{{title}}</h3>
-    <hr/>
+<dialog
+    #dialog
+    (click)="onClick($event)"
+    (keyup.escape)="close()"
+    tabindex="0"
+    type="modal"
+    class="drawer"
+>
+    @if (title) {
+        <h3>{{ title }}</h3>
+        <hr />
     }
-    <div class="modal-content">
+    <div
+        class="modal-content"
+        tabindex="0"
+    >
         <ng-content></ng-content>
     </div>
-    <hr/>
+    <hr />
     <div class="modal-actions">
-        <app-button (onClick)="close()" [variant]="'secondary'">Annuler</app-button>
-        <app-button (onClick)="onConfirmEmit($event)" type="submit">Valider</app-button>
+        <app-button
+            (click)="confirmEmit(false)"
+            [variant]="'secondary'"
+            >Annuler</app-button
+        >
+        <app-button
+            type="submit"
+            (click)="confirmEmit(true)"
+            >{{ confirmButtonText }}</app-button
+        >
     </div>
 </dialog>

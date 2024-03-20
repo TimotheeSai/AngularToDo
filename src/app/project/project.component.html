@@ -1,44 +1,53 @@
-<li class='project'>
-    <div class='project_left'> <img class='project_icon' src="assets/svg/projectIcon.svg" />
+<li class="project">
+    <div class="project_left">
+        <img
+            class="project_icon"
+            src="assets/svg/projectIcon.svg"
+            alt="project"
+        />
         <div>
-            <p class='sub_title'>{{ projectCategory }}</p>
-            <h4 class='title'>{{ project.name }}</h4>
-            <div class='tags'>
-                <app-tag [name]="project.user" [dark]=true></app-tag>
-                @if(project.contract) {
-                <app-tag [name]="project.contract"></app-tag>
+            <p class="sub_title">{{ projectCategory }}</p>
+            <h4 class="title">{{ project.name }}</h4>
+            <div class="tags">
+                <app-tag
+                    [name]="project.user"
+                    [dark]="true"
+                ></app-tag>
+                @if (project.contract) {
+                    <app-tag [name]="project.contract"></app-tag>
                 }
             </div>
         </div>
     </div>
-    <div class='project_right'>
+    <div class="project_right">
         <app-pill [text]="project.status"></app-pill>
         <div class="popup_menu_container">
             <button (click)="togglePopupMenu(true)">
-                <img class='menu' src="assets/svg/threeDotsVert.svg" />
+                <img
+                    class="menu"
+                    src="assets/svg/threeDotsVert.svg"
+                    alt="menu"
+                />
             </button>
-            @if(popupMenuVisible) {
-            <div (click)="togglePopupMenu(false)" class="popup_menu_backdrop"></div>
+            @if (popupMenuVisible) {
+                <div
+                    (click)="togglePopupMenu(false)"
+                    (keyup.escape)="togglePopupMenu(false)"
+                    class="popup_menu_backdrop"
+                    tabindex="0"
+                ></div>
             }
             <dialog #popup>
-                <ul class='popup_menu'>
+                <ul class="popup_menu">
                     <li>
-                        <button (click)="editProject.emit(project);togglePopupMenu(false)">
-                            Modifier
-                        </button>
+                        <button (click)="editProject.emit(project); togglePopupMenu(false)">Modifier</button>
                     </li>
                     <li>
-                        <button (click)="deleteProject();togglePopupMenu(false)">
-                            Supprimer
-                        </button>
+                        <button (click)="deleteProject()">Supprimer</button>
                     </li>
                 </ul>
             </dialog>
             <!-- } -->
         </div>
     </div>
-
 </li>
-<!-- <app-modal #modal [title]="'Ajouter une demande d\'autorisation'"> -->
-<!--   <app-project-editor [project]="project"></app-project-editor> -->
-<!-- </app-modal> -->

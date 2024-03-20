@@ -12,19 +12,19 @@ export class ModalComponent {
     @ViewChild('dialog') dialog!: ElementRef<HTMLDialogElement>;
     @Input() title: string = '';
     @Input() confirmButtonText?: string = 'Valider';
-    @Output() onConfirm = new EventEmitter();
-
+    @Output() confirm = new EventEmitter();
 
     show() {
-        this.dialog.nativeElement.showModal()
+        this.dialog.nativeElement.showModal();
     }
 
     close() {
-        this.dialog.nativeElement.close()
+        this.dialog.nativeElement.close();
     }
 
-    onConfirmEmit(event: Event) {
-        this.onConfirm.emit(event);
+    confirmEmit(confirmed: boolean) {
+        this.confirm.emit(confirmed);
+        if (!confirmed) this.close();
     }
 
     onClick(event: MouseEvent) {

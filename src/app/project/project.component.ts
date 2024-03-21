@@ -27,12 +27,11 @@ export class ProjectComponent {
     }
 
     togglePopupMenu(show: boolean) {
+        this.popupMenuVisible = show;
         if (show) {
             this.popup.nativeElement.show();
-            this.popupMenuVisible = true;
         } else {
             this.popup.nativeElement.close();
-            this.popupMenuVisible = false;
         }
     }
 

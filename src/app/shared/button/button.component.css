@@ -9,6 +9,7 @@ button {
     align-items: center;
     justify-content: space-around;
     cursor: pointer;
+    height: 2.5rem;
 }
 
 .primary {

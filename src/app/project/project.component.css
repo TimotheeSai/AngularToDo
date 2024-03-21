@@ -6,7 +6,6 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 1rem;
-    /* width: 51rem; */
     animation: show 150ms ease-in normal;
 }
 
@@ -67,6 +66,8 @@ button {
     cursor: pointer;
     font-family: 'Inter';
     color: var(--neutral-600);
+    margin: -1.2rem;
+    padding: 1.2rem;
 }
 
 .popup_menu_container {

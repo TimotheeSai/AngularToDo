@@ -1,6 +1,5 @@
 # AngularTodo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 [stackblitz demp](https://stackblitz.com/~/github.com/TimotheeSai/AngularToDo)
 
 ## ToDo
@@ -11,10 +10,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 -   [x] Form errors
 -   [x] responsive
 -   [x] basic tests, with screenshot ?
--   [ ] Check style
--   [ ] animate disapear ?
+-   [x] Check style
 -   [x] scroll
 -   [x] modal submit text
+-   [x] move small html to template string
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
 ## Development server
 

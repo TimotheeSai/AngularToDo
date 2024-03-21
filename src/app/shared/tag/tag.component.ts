@@ -5,7 +5,14 @@ import { NgClass } from '@angular/common';
     selector: 'app-tag',
     standalone: true,
     imports: [NgClass],
-    templateUrl: './tag.component.html',
+    template: `
+        <span
+            class="tag"
+            [ngClass]="{ dark: dark }"
+        >
+            {{ name }}
+        </span>
+    `,
     styleUrl: './tag.component.css',
 })
 export class TagComponent {

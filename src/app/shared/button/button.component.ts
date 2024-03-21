@@ -5,7 +5,14 @@ import { NgClass } from '@angular/common';
     selector: 'app-button',
     standalone: true,
     imports: [NgClass],
-    templateUrl: './button.component.html',
+    template: `
+        <button
+            [ngClass]="variant"
+            [type]="type"
+        >
+            <ng-content></ng-content>
+        </button>
+    `,
     styleUrl: './button.component.css',
 })
 export class ButtonComponent {

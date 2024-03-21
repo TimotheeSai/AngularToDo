@@ -5,7 +5,11 @@ import { TitleCasePipe } from '@angular/common';
     selector: 'app-pill',
     standalone: true,
     imports: [TitleCasePipe],
-    templateUrl: './pill.component.html',
+    template: `
+        <span class="pill">
+            {{ text | titlecase }}
+        </span>
+    `,
     styleUrl: './pill.component.css',
 })
 export class PillComponent {

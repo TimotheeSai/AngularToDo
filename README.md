@@ -1,19 +1,7 @@
 # AngularTodo
 
-[stackblitz demp](https://stackblitz.com/~/github.com/TimotheeSai/AngularToDo)
+[stackblitz demo](https://stackblitz.com/~/github.com/TimotheeSai/AngularToDo)
 
-## ToDo
-
-[Test Angular](https://xd.adobe.com/view/166546a3-bf60-4319-b902-ae246ac8795e-4336/specs/)
-
--   [x] eslint + prettier
--   [x] Form errors
--   [x] responsive
--   [x] basic tests, with screenshot ?
--   [x] Check style
--   [x] scroll
--   [x] modal submit text
--   [x] move small html to template string
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
 
@@ -35,8 +23,27 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```sh
+npm run e2e
 
-## Further help
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Run [playwright](https://playwright.dev/) tests
+
+
+## Design
+
+[Test Angular](https://xd.adobe.com/view/166546a3-bf60-4319-b902-ae246ac8795e-4336/specs/)
+
+
+## ToDo
+
+-   [x] eslint + prettier
+-   [x] Form errors
+-   [x] responsive
+-   [x] basic tests, with screenshot ?
+-   [x] Check style
+-   [x] scroll
+-   [x] modal submit text
+-   [x] move small html to template string
+

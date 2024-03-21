@@ -8,11 +8,15 @@ input[type='text'] {
     border: 1px solid var(--neutral-200);
     border-radius: 10px;
     padding: 1rem;
-    width: 30rem;
+    width: 28rem;
     font-size: 1rem;
     font-family: 'Inter';
     color: var(--neutral-600);
     margin-bottom: 0.5rem;
+}
+
+input[type='text']:last-of-type {
+    margin-bottom: 0;
 }
 
 input.ng-invalid.ng-touched {

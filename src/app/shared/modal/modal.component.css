@@ -1,7 +1,7 @@
 dialog {
     padding: 0;
     border: none;
-    border-radius: 10px;
+    border-radius: 24px;
 }
 
 dialog:modal {
@@ -28,12 +28,14 @@ hr {
 h3 {
     margin: 1.5rem;
     color: var(--neutral-900);
+    font-size: 1.25rem;
     font-family: 'Poppins';
     font-weight: 500;
 }
 
 .modal-content {
-    margin: 2rem 1.5rem;
+    margin: 2.25rem 1.5rem;
+    outline: none;
 }
 
 .modal-actions {

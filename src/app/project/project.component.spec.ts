@@ -30,7 +30,7 @@ describe('ProjectComponent', () => {
     it('should render content', () => {
         const compiled = fixture.nativeElement as HTMLElement;
         expect(compiled.querySelector('.title')?.textContent).toContain('Projet de travaux lorem ipsum');
-        expect(compiled.querySelector('.sub_title')?.textContent).toContain('Demande d\'autorisation de travaux');
+        expect(compiled.querySelector('.sub_title')?.textContent).toContain("Demande d'autorisation de travaux");
         expect(compiled.querySelector('.tag.dark')?.textContent).toContain('John Doe');
         expect(compiled.querySelector('.tag:not(.dark)')?.textContent).toContain('Contrat 1534885932');
     });
